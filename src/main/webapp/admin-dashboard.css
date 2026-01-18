@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+    height: 85px;
+    background: linear-gradient(90deg, #151565 0%, #0000ff 68%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.username {
+    color: white;
+    font-size: 26px;
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* MAIN */
+.main-container {
+    padding: 20px;
+}
+
+/* FILTER */
+.filter-container {
+    position: relative;
+    display: inline-block;
+}
+
+.filter-btn {
+    background: #0000ff;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Main dropdown */
+.filter-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #00a014;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+/* Checkbox toggle */
+#filter-toggle:checked + .filter-btn + .filter-dropdown {
+    display: block;
+}
+
+/* Links */
+.filter-dropdown a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.filter-dropdown a:hover {
+    background: #f2f2f2;
+}
+
+/* Divider */
+.divider {
+    height: 1px;
+    background: #00a014;
+    margin: 5px 0;
+}
+
+/* Sub menus */
+.filter-group {
+    position: relative;
+}
+
+/* IMPORTANT: make span block-level */
+.filter-group span {
+    display: block;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+    white-space: nowrap;
+}
+
+/* Sub-filter */
+.sub-filter {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: white;
+    border: 1px solid #00a014;
+    min-width: 140px;
+}
+
+/* KEEP submenu open when hovering parent OR submenu */
+.filter-group:hover .sub-filter,
+.sub-filter:hover {
+    display: block;
+}
+
+
+
+/* TABLE */
+.table-wrapper {
+    border: 1px solid #00a014;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #00a014;
+    text-align: center;
+}
+
+.no-data {
+    padding: 20px;
+    text-align: center;
+}
